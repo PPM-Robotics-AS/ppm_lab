@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <name>ppm_lab</name>
+  <version>0.0.1</version>
+  <description>PPM Labor setup.</description>
+  <maintainer email="balint.tahi@ppm.no">Balint Tahi</maintainer>
+  <license>TODO</license>
+  <author email="balint.tahi@ppm.no">Balint Tahi</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

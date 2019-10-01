@@ -1,0 +1,484 @@
+<?xml version='1.0'?>
+<robot name="ppm_lab">
+
+  <material name="desk_dark">
+    <color rgba="0.15 0.15 0.15 1"/>
+  </material>
+
+  <material name="plate_light_gray">
+    <color rgba="0.80 0.80 0.80 1"/>
+  </material>
+
+  <material name="torch_gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+
+  <link name="world"/>
+
+  <link name="base"/>
+  
+  <link name="base_link">
+    <inertial>
+      <mass value="52.05560"/>
+      <origin xyz="-0.04209 -0.00037 0.1781" rpy="0 0 0"/>
+      <inertia ixx="863290107.45e-09" ixy=  "-1056037.91e-09" ixz=  "6381175.98e-09"
+                                      iyy="1200814101.56e-09" iyz=  "2291744.87e-09"
+                                                              izz="903125124.47e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/base_link.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.06 0 0.12" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.41 0.17 0.24"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.195 0 0.145" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.14 0.17 0.29"/>
+      </geometry>
+    </collision>
+        <collision>
+      <origin xyz="0 0 0.165" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.13" length="0.33"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_1">
+    <inertial>
+      <mass value="51.22680"/>
+      <origin xyz="0.02787 0.00273 0.11871" rpy="0 0 0"/>
+      <inertia ixx="1278476799.39e-09" ixy="116091072.31e-09" ixz= "139332150.45e-09"
+                                       iyy="862693309.53e-09" iyz= "-28163220.90e-09"
+                                                              izz="1466371909.51e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_1.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.06076 0.02225 0.0825" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.34 0.165"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.01381 0.02225 0.005" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.27 0.34 0.01"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.06981 0.02225 0.08566" rpy="0 1.5708 0"/>
+      <geometry>
+        <box size="0.215 0.34 0.01"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.15 -0.144 0.207" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.125" length="0.032"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.15 0.17064 0.207" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.105" length="0.065"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_2">
+    <inertial>
+      <mass value="59.69203"/>
+      <origin xyz="0.00414 0.03788 0.12660" rpy="0 0 0"/>
+      <inertia ixx="1857042873.20e-09" ixy= "-17295347.06e-09" ixz=   "6431293.48e-09"
+                                       iyy="1723219736.02e-09" iyz="-260297320.23e-09"
+                                                               izz= "666222254.18e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_2.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.115" length="0.31"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.185" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.11" length="0.37"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.3875" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_7">
+    <inertial>
+      <mass value="29.18848"/>
+      <origin xyz="-0.00340 0.02519 0.11555" rpy="0 0 0"/>
+      <inertia ixx="606743200.72e-09" ixy=  "3136702.76e-09" ixz=  "8336678.46e-09"
+                                      iyy="309512691.28e-09" iyz= "42756193.68e-09"
+                                                             izz="491006982.70e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_7.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 -0.01168 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.14 0.35 0.1"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 -0.14616 0.21076" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.08"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0.14051 0.21076" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.085" length="0.085"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_3">
+    <inertial>
+      <mass value="35.37538"/>
+      <origin xyz="0.005 0.03723 0.05773" rpy="0 0 0"/>
+      <inertia ixx="404065298.19e-09" ixy= "-1720327.66e-09" ixz="-11052311.77e-09"
+                                      iyy="428545103.80e-09" iyz="-65091447.11e-09"
+                                                             izz="379757505.09e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_3.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0.02756 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.27"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.0405 0.00136 0.12788" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.27"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.11711 0.00136 0.10011" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.075" length="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_4">
+    <inertial>
+      <mass value="24.82469"/>
+      <origin xyz="0.19634 -0.00684 0.00065" rpy="0 0 0"/>
+      <inertia ixx="171441694.31e-09" ixy= "-4753681.47e-09" ixz=  "-534293.42e-09"
+                                      iyy="481187769.92e-09" iyz=   "163683.52e-09"
+                                                             izz="525201163.94e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_4.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.19 -0.0065 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.38 0.195 0.15"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.38 -0.08 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.075" length="0.05"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.38 0.065 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.075" length="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_5">
+    <inertial>
+      <mass value="6.76157"/>
+      <origin xyz="0.00448 -0.01262 0.00024" rpy="0 0 0"/>
+      <inertia ixx="12400683.64e-09" ixy=  "530569.76e-09" ixz=   "87309.48e-09"
+                                     iyy="14655465.06e-09" iyz=   "43172.82e-09"
+                                                           izz="13338035.40e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_5.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 -0.015 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0625" length="0.11"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.03935 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.07"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="link_6">
+    <inertial>
+      <mass value="2.40790"/>
+      <origin xyz="0.02667 0 -0.00006" rpy="0 0 0"/>
+      <inertia ixx="2787800.29e-09" ixy=   "-316.90e-09" ixz=    "424.93e-09"
+                                    iyy="2010187.65e-09" iyz=    "400.91e-09"
+                                                         izz="2033705.83e-09"/>
+    </inertial>
+
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/link_6.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0275 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.055"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="torch">
+	<visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/torch.stl"/>
+      </geometry>
+      <material name="torch_gray"/>
+    </visual>
+  </link>
+
+  <link name="tcp">
+	  <visual name="visual">
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="tip">
+	  <visual name="visual">
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="scanner">
+	<visual name="visual">
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="table">
+	<visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/table.stl"/>
+      </geometry>
+      <material name="desk_dark"/>
+    </visual>
+  </link>
+
+  <link name="plate">
+	  <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/workpiece.stl"/>
+      </geometry>
+      <material name="plate_light_gray"/>
+    </visual>
+  </link>
+
+  <link name="flange">
+	  <visual name="visual">
+      <geometry>
+        <mesh filename="package://ppm_lab/meshes/flange.stl"
+	      scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="plate_light_gray"/>
+    </visual>
+  </link>
+
+  <joint type="revolute" name="world_base_link">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+    <limit lower="0" upper="0" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="fixed" name="world_table_link">
+    <parent link="world"/>
+    <child link="table"/>
+    <origin xyz="-0.3 0.5 0.84"/>
+  </joint>
+
+  <joint type="fixed" name="table_plate_link">
+    <parent link="table"/>
+    <child link="plate"/>
+    <origin xyz="0.96 0.05 0.025" rpy="0 0 1.570796"/>
+  </joint>
+
+  <joint type="revolute" name="base_link_base">
+    <parent link="base_link"/>
+    <child link="base"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0" upper="0" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_1">
+    <origin xyz="0 0 0.293" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_2">
+    <origin xyz="0.15 0 0.207" rpy="0 0 0"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.96" upper="2.09" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_3">
+    <origin xyz="0 0 0.2045" rpy="0 0 0"/>
+    <parent link="link_7"/>
+    <child link="link_3"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.89" upper="2.35" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_4">
+    <origin xyz="0.1335 0 0.1" rpy="0 0 0"/>
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_5">
+    <origin xyz="0.3665 0 0" rpy="0 0 0"/>
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.42" upper="2.42" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_6">
+    <origin xyz="0.0705 0 0" rpy="0 0 0"/>
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-6.28" upper="6.28" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="revolute" name="joint_7">
+    <origin xyz="0 0 0.3955" rpy="0 0 0"/>
+    <parent link="link_2"/>
+    <child link="link_7"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="30" velocity="1"/>
+  </joint>
+
+  <joint type="fixed" name="link6_flange">
+    <origin xyz="0.0545 0 0" rpy="1.570796 0 1.570796"/>
+    <parent link="link_6"/>
+    <child link="flange"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint type="fixed" name="flange_torch">
+    <origin xyz="0.101 0.131 -0.006" rpy="0 0 1.570796"/>
+    <parent link="flange"/>
+    <child link="torch"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- <joint type="revolute" name="torch_tip">
+    <origin xyz="0.4295 0 0" rpy="-1.570796 -0.785398 0"/>
+    <parent link="link_6"/>
+    <child link="tip"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint> -->
+
+  <joint type="revolute" name="torch_tip">
+    <origin xyz="0.4295 0 0" rpy="0 -0.785398 0"/>
+    <parent link="link_6"/>
+    <child link="tip"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <joint type="revolute" name="scanner_tip">
+    <origin xyz="0.313575 0.059613 -0.03619" rpy="0.785398 0 -1.570796"/>
+    <parent link="link_6"/>
+    <child link="scanner"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <joint type="revolute" name="link_6_tcp">
+    <origin xyz="0.0495 0 0" rpy="0 0 0"/>
+    <parent link="link_6"/>
+    <child link="tcp"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+
+</robot>
